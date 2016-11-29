@@ -5,8 +5,9 @@
 
 /* FONT VARIABLES */
 
-$mainFontStyle: 'Roboto', sans-serif;
-$mainFontSize: 20px;
+$mainFontStyle: 'Dancing Script', cursive;
+$prettyFontStyle: 'Bungee Inline', cursive;
+$fontSize: 20px;
 
 /******************/
 
@@ -19,7 +20,7 @@ $mainFontSize: 20px;
 
 body{
 	font-family: $mainFontStyle;
-	font-size: $mainFontSize;
+	font-size: $fontSize;
 	background-color: #f9f9f9;
     color: #333;
 }
