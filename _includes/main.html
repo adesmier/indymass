@@ -1,7 +1,7 @@
 <section id="intro-container">
-    <div>The <span id='day-counter'>1</span> days</div>
+    <div id="intro-text">The <span id='day-counter'>1</span> days</div>
     <div id="seperator">of</div>
-    <div class="snow-font">Something</div>
+    <div id="indymass" class="snow-font">Indymass</div>
 </section>
 
 <section id="calender-container">
@@ -9,16 +9,23 @@
     {% for day in site.data.days %}
 
     <div class="outer-wrapper">
-        <div class="calender-item redeemed" data-day="{{ day.date }}">
+        <div class="calender-item" data-day="{{ day.date }}">
             <div class="front">
                 <p class="snow-font">{{ day.day }}</p>
+                <img class="holy" src="assets/imgs/holy.png" alt="festive holy" />
+                <img class="festive-image" src="assets/imgs/{{ day.frontimage }}.png" alt="festive image" />
             </div>
             <div class="back">
                 <h1><span class="snow-font">{{ day.day }}</span>{{ day.title }}</h1>
+                <img class="clue-image" src="assets/imgs/{{ day.backimage }}.png" alt="clue image" />
             </div>
         </div>
     </div>
 
     {% endfor %}
 
+</section>
+
+<section id="footer">
+    <p>For Nic xxx</p>
 </section>
