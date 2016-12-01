@@ -47,7 +47,7 @@ $(function(){
         //     });
         // }
 
-        if(clickedDay <= 18){
+        if(clickedDay <= 118){
             $(this).toggleClass('flipped');
         } else {
             $(this).addClass('shake').delay(800).queue(function(next){

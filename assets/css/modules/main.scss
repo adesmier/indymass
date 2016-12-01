@@ -134,30 +134,59 @@ body{
 				font-size: 140%;
 				font-weight: normal;
 				line-height: 35px;
-				margin: 0 auto 8px auto;
+				margin: 0 auto 3px auto;
 			}
+		}
+		.clue-image{
+			margin-top: 10px;
+			width: 60px;
 		}
 	}
 }
 
-@media only screen and (max-width: 1000px){
+@media only screen and (max-width: 1300px){
 	.outer-wrapper{
 		width: 33%;
 		padding-bottom: 33%;
 	}
 }
 
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 995px){
+	#indymass{
+		font-size: 280%;
+		letter-spacing: 30px;
+	}
+	#intro-text{
+		font-size: 400%;
+	}
+
+	#seperator{
+		font-size: 150%;
+	}
+}
+
+@media only screen and (max-width: 860px){
 	.outer-wrapper{
 		width: 50%;
 		padding-bottom: 50%;
 	}
 }
 
-@media only screen and (max-width: 580px){
+@media only screen and (max-width: 630px){
 	.outer-wrapper{
 		width: 100%;
 		padding-bottom: 100%;
+	}
+	#indymass{
+		font-size: 200%;
+		letter-spacing: 20px;
+	}
+	#intro-text{
+		font-size: 350%;
+	}
+
+	#seperator{
+		font-size: 100%;
 	}
 }
 
