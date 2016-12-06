@@ -10,8 +10,11 @@ $redeemFontStyle: 'Roboto', sans-serif;
 $fontSize: 20px;
 
 @font-face{
-    font-family: snowFont;
-    src: url(../fonts/almontesnow.ttf);
+	font-family: 'snowFont';
+	src: url('../fonts/almontesnow.eot');
+	src: url('../fonts/almontesnow.eot?#iefix') format('embedded-opentype'),
+	     url('../fonts/almontesnow.woff') format('woff'),
+	     url('../fonts/almontesnow.ttf') format('truetype');
 }
 
 /******************/

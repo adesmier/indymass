@@ -50,7 +50,7 @@ gulp.task('sass', function () {
             //onError: browserSync.notify
         }))
         .pipe(cleanCss({compatibility: 'ie8'})) //minify main.css
-        .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
+        .pipe(prefix(['last 30 versions'], { cascade: true }))
         .pipe(gulp.dest('_site/assets/css'))
         .pipe(browserSync.reload({stream:true}))
         .pipe(gulp.dest('assets/css'));
