@@ -18,8 +18,7 @@ $(function(){
     var counter = new CountUp("day-counter", 0, remainingDays, 0, 2.5, options);
     counter.start();
 
-    if(remainingDays <= 7){
-        console.log('here');
+    if(remainingDays <= 0){
         $('#countdown-container').hide();
         $('#intro-container').css('display', 'block');
         $('#calender-container').css('display', 'flex');
@@ -27,12 +26,12 @@ $(function(){
 
     var $calItem = $('.calender-item');
 
-    $('.calender-item').bind('click', function(){
+    $calItem.bind('click', function(){
 
         var clickedDay = $(this).attr('data-day');
 
-        if(clickedDay <= 118){
-            $(this).toggleClass('flipped');
+        if(clickedDay <= day){
+            $(this).find('.back').fadeToggle();
         } else {
             $(this).addClass('shake').delay(800).queue(function(next){
                 $(this).removeClass('shake');
