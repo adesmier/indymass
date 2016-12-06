@@ -18,7 +18,7 @@ $(function(){
     var counter = new CountUp("day-counter", 0, remainingDays, 0, 2.5, options);
     counter.start();
 
-    if(remainingDays <= 0){
+    if(remainingDays <= 7){
         console.log('here');
         $('#countdown-container').hide();
         $('#intro-container').css('display', 'block');
@@ -40,8 +40,17 @@ $(function(){
             });
         }
 
+    });
 
+    $('.clue-button').bind('click', function(event){
+
+        event.stopPropagation();
+        var src = $(this).next().attr('data-src');
+        $(this).hide();
+        $(this).next().attr('src', src);
 
     });
+
+
 
 });
