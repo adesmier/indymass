@@ -30,10 +30,15 @@ body{
 	100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 
-#intro-container{
+#intro-container,
+#countdown-container{
 	width: 80%;
 	margin: 20px auto;
 	text-align: center;
+}
+
+#intro-container{
+	display: none;
 }
 
 #intro-text{
@@ -63,10 +68,11 @@ body{
 }
 
 #calender-container{
+	display: none;
 	width: 70%;
 	max-width: 1140px;
-	margin: 0 auto 40px auto;
-	display: flex;
+	margin: 0 auto 20px auto;
+	//display: flex;
 	flex-wrap: wrap;
 }
 
@@ -195,10 +201,11 @@ body{
 }
 
 #footer{
+	width: 100px;
+	margin: 0 auto 20px auto;
 	text-align: center;
 	font-weight: bold;
 	font-size: 110%;
-	margin-bottom: 40px;
 }
 
 .redeemed:after{

@@ -11,41 +11,25 @@ $(function(){
       suffix : ''
     };
 
-    var demo = new CountUp("day-counter", 0, 12, 0, 2.5, options);
-    demo.start();
-
     var date = new Date();
     var day = date.getDate();
+    var remainingDays = 13 - day;
+
+    var counter = new CountUp("day-counter", 0, remainingDays, 0, 2.5, options);
+    counter.start();
+
+    if(remainingDays <= 0){
+        console.log('here');
+        $('#countdown-container').hide();
+        $('#intro-container').css('display', 'block');
+        $('#calender-container').css('display', 'flex');
+    }
+
     var $calItem = $('.calender-item');
 
     $('.calender-item').bind('click', function(){
 
         var clickedDay = $(this).attr('data-day');
-        //var $self = $(this);
-
-        // $calItem.each(function(){
-        //     console.log($(this).attr('data-day'));
-        //     if($(this) == $self){
-        //         return;
-        //     } else {
-        //         if($(this).hasClass('flipped')){
-        //             $(this).removeClass('flipped');
-        //         }
-        //     }
-        // });
-        //
-        // if(clickedDay <= 18){
-        //     if($self.hasClass('flipped')){
-        //         $self.removeClass('flipped');
-        //     } else {
-        //         $self.addClass('flipped');
-        //     }
-        // } else {
-        //     $(this).addClass('shake').delay(800).queue(function(next){
-        //         $(this).removeClass('shake');
-        //         next();
-        //     });
-        // }
 
         if(clickedDay <= 118){
             $(this).toggleClass('flipped');
